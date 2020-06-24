@@ -1,5 +1,5 @@
 {
     "port": 8080,
     "files": ["./ping-coming-soon-page/*.{html,htm,css,js}"],
-    "server": { "baseDir": "./ping-coming-soon-page" }
+    "server": { "baseDir": ["./ping-coming-soon-page", "./"] }
   }
