@@ -182,15 +182,15 @@ body{
 @media (min-width: 900px){
     .container{
         padding: 0;
-        max-width: 60rem;
+        max-width: 70rem;
         height: 100vh;
     }
     .heading{
-        font-size: 3rem;
+        font-size: 3.2rem;
         margin-bottom: 1rem;
     }
     .paragraph{
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding: 0;
         margin-top: 1rem;
     }
@@ -220,8 +220,11 @@ body{
     }
 
     .illustration{
-        margin-bottom: 5rem;
+        margin: 6rem 0;
         padding: 0 5rem;
+    }
+    .copyright{
+        margin-top: 2rem;
     }
 }
 
