@@ -185,14 +185,18 @@ body{
         max-width: 70rem;
         height: 100vh;
     }
+    .logo-wrapper{
+        width: 10rem;
+    }
     .heading{
-        font-size: 3.2rem;
+        font-size: 4.8rem;
         margin-bottom: 1rem;
     }
     .paragraph{
-        font-size: 1.6rem;
+        font-size: 2.4rem;
         padding: 0;
         margin-top: 1rem;
+        opacity: 1;
     }
     
     .signup-form{
@@ -214,17 +218,35 @@ body{
         left: 2.4rem;
         text-align: left;
     }
-    
+
+    .email-input{
+        padding: 1.6rem 2.4rem;
+        font-size: 2rem;
+    }
+
     .signup-form-btn{
+        padding: 1.6rem 2.4rem;
         flex: 1 1 0;
+        font-size: 2rem;
     }
 
     .illustration{
         margin: 6rem 0;
         padding: 0 5rem;
     }
+
+    .social-icon-link{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .social-icons i {
+        font-size: 2rem;
+    }
+    
     .copyright{
         margin-top: 2rem;
+        font-size: 1.6rem;
     }
 }
 
