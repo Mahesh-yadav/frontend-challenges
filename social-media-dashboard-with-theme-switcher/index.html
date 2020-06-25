@@ -11,15 +11,22 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <input type="checkbox" name="theme-mode" id="theme-mode">
-  <main class="container">
-    <div class="title">
-      <h1>Social Media Dashboard</h1>
-      <p>Total Followers: 23,004</p>
-    </div>
-    <label for="theme-mode">Dark Mode</label>
+  <input type="checkbox" name="theme-mode" id="theme-mode" hidden>
+  <main class="dashboard light-theme">
+    <header class="dashboard-header">
+      <div class="title">
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+      </div>
+      <div class="theme-mode">
+        <label for="theme-mode" class="theme-toggle-label">
+          Dark Mode
+          <span class="theme-toggle-btn"></span>
+        </label>
+      </div>
+    </header>
     <section class="follower-cards">
-      <div class="follower-card">
+      <div class="follower-card facebook-card">
         <div class="card-user">
           <img src="./images/icon-facebook.svg" alt="Facebook Icon">
           <span>@nathanf</span>
@@ -31,7 +38,7 @@
           <span>12 Today</span>
         </div>
       </div>
-      <div class="follower-card">
+      <div class="follower-card twitter-card">
         <div class="card-user">
           <img src="./images/icon-twitter.svg" alt="Twitter Icon">
           <span>@nathanf</span>
@@ -43,7 +50,7 @@
           <span>99 Today</span>
         </div>
       </div>
-      <div class="follower-card">
+      <div class="follower-card instagram-card">
         <div class="card-user">
           <img src="./images/icon-instagram.svg" alt="Instagram Icon">
           <span>@realnathanf</span>
@@ -55,7 +62,7 @@
           <span>1099 Today</span>
         </div>
       </div>
-      <div class="follower-card">
+      <div class="follower-card youtube-card">
         <div class="card-user">
           <img src="./images/icon-youtube.svg" alt="Youtube Icon">
           <span>Nathan F.</span>
@@ -70,74 +77,74 @@
     </section>
     <section class="overview-cards">
       <h2 class="overview-heading">Overview - Today</h2>
-      <div class="overview-card">
+      <div class="overview-card card-1">
         <span class="card-title">Page Views</span>
         <img src="./images/icon-facebook.svg" alt="Facebook Icon" class="card-social-icon">
         <span class="card-count">87</span>
-        <div class="count-up">
+        <div class="count-change count-up">
           <img src="./images/icon-up.svg" alt="Up Icon">
           <span>3%</span>
         </div>
       </div>
-      <div class="overview-card">
+      <div class="overview-card card-2">
         <span class="card-title">Likes</span>
         <img src="./images/icon-facebook.svg" alt="Facebook Icon" class="card-social-icon">
         <span class="card-count">52</span>
-        <div class="count-down">
+        <div class="count-change count-down">
           <img src="./images/icon-down.svg" alt="Down Icon">
           <span>2%</span>
         </div>
       </div>
-      <div class="overview-card">
+      <div class="overview-card card-3">
         <span class="card-title">Likes</span>
         <img src="./images/icon-instagram.svg" alt="Instagram Icon" class="card-social-icon">
         <span class="card-count">5462</span>
-        <div class="count-up">
+        <div class="count-change count-up">
           <img src="./images/icon-up.svg" alt="Up Icon">
           <span>2257%</span>
         </div>
       </div>
-      <div class="overview-card">
+      <div class="overview-card  card-4">
         <span class="card-title">Profile Views</span>
         <img src="./images/icon-instagram.svg" alt="Instagram Icon" class="card-social-icon">
         <span class="card-count">52k</span>
-        <div class="count-up">
+        <div class="count-change count-up">
           <img src="./images/icon-up.svg" alt="Up Icon">
           <span>1375%</span>
         </div>
       </div>
-      <div class="overview-card">
+      <div class="overview-card  card-5">
         <span class="card-title">Retweets</span>
         <img src="./images/icon-twitter.svg" alt="Twitter Icon" class="card-social-icon">
         <span class="card-count">117</span>
-        <div class="count-up">
+        <div class="count-change count-up">
           <img src="./images/icon-up.svg" alt="Up Icon">
           <span>303%</span>
         </div>
       </div>
-      <div class="overview-card">
+      <div class="overview-card card-6">
         <span class="card-title">Likes</span>
         <img src="./images/icon-twitter.svg" alt="Twitter Icon" class="card-social-icon">
         <span class="card-count">507</span>
-        <div class="count-up">
+        <div class="count-change count-up">
           <img src="./images/icon-up.svg" alt="Up Icon">
           <span>553%</span>
         </div>
       </div>
-      <div class="overview-card">
+      <div class="overview-card card-7">
         <span class="card-title">Likes</span>
         <img src="./images/icon-youtube.svg" alt="Youtube Icon" class="card-social-icon">
         <span class="card-count">107</span>
-        <div class="count-down">
+        <div class="count-change count-down">
           <img src="./images/icon-down.svg" alt="Down Icon">
           <span>19%</span>
         </div>
       </div>
-      <div class="overview-card">
+      <div class="overview-card  card-8">
         <span class="card-title">Total Views</span>
         <img src="./images/icon-youtube.svg" alt="Youtube Icon" class="card-social-icon">
         <span class="card-count">1407</span>
-        <div class="count-down">
+        <div class="count-change count-down">
           <img src="./images/icon-down.svg" alt="Down Icon">
           <span>12%</span>
         </div>
