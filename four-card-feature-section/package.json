@@ -1,0 +1,9 @@
+{
+  "name": "four-card-feature-section",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  }
+}

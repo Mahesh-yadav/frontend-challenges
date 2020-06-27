@@ -1,0 +1,13 @@
+{
+  "name": "fylo-two-column-layout",
+  "version": "1.0.0",
+  "description": "create a two column layout",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1"
+  }
+}

@@ -1,0 +1,507 @@
+html{
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 2rem 3rem;
+}   
+
+.logo-wrapper{
+    width: 10rem;
+}
+
+.logo-wrapper img{
+    width: 100%;
+}
+
+.nav-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: hsl(243, 87%, 12%);
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.nav-link:hover{
+    color: hsl(224, 93%, 58%);
+}
+
+@media (min-width: 500px){
+    .nav-link{
+        margin-right: 2rem;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 750px){
+    .nav-link{
+        margin-right: 3rem;
+        font-size: 2rem;
+    }
+}
+
+.storage{
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.illustration{
+    margin: 0;
+    padding: 1rem;
+    max-width: 40rem;
+}
+
+.illustration img{
+    width: 100%;
+}
+
+.storage-content{
+    text-align: center;
+    padding: 1rem;
+    max-width: 50rem;
+}
+
+.storage-content .heading{
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: hsl(243, 87%, 12%);
+    margin-bottom: 3rem;
+}
+
+.storage-content .info{
+    font-size: 1.5rem;
+    color: hsl(243, 87%, 12%);
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.storage .signup-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control{
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.signup-text-input{
+    width: 100%;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    padding: 1rem 1.5rem;
+    color: #444;
+    border: .1rem solid hsl(238, 22%, 44%);
+    border-radius: .3rem;
+    outline: none;
+}
+
+.signup-text-input:focus{
+    border: .2rem solid #f67824;
+}
+
+.signup-btn{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    width: 100%;
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    border: none;
+    border-radius: .3rem;
+    box-shadow: .3rem .3rem 1rem hsl(0, 0%, 75%);
+}
+
+.signup-btn:hover{
+    color: #f67824;
+}
+
+@media (min-width: 900px){
+    .storage{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .storage .signup-form{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .storage .signup-btn{
+        margin-top: 0;
+    }
+    
+    .storage .illustration{
+        order: 2;
+        max-width: 35rem;
+    }
+    .storage-content{
+        order: 1;
+    }
+}
+
+.share{
+    padding: 5rem 0;
+    /* background-image: url(./images/bg-curve-mobile.svg), linear-gradient(to bottom,white, hsl(240, 75%, 98%), hsla(240, 75%, 98%, 0.4));
+    background-position: top, 0 0;
+    background-repeat: no-repeat, repeat; */
+    background-color: hsl(240, 80%, 98%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.share .illustration{
+    padding: 2rem;
+}
+
+.share-content{
+    padding: 2rem;
+    max-width: 50rem;
+}
+
+.share-content .heading{
+    color: hsl(243, 87%, 12%);
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.share-content .info{
+    font-size: 1.5rem;
+    color: hsl(238, 22%, 44%);
+    margin-bottom: 3rem;
+}
+
+.fylo-link-wrapper{
+    text-align: center;
+}
+
+.fylo-link{
+    color: hsl(170, 45%, 43%);
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: .1rem solid hsl(170, 45%, 43%);
+}
+
+.fylo-link span{
+    vertical-align: middle;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.fylo-link img{
+    vertical-align: middle;
+}
+
+.testimonial{
+    margin: 4rem 2rem 0 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: .3rem;
+    box-shadow: .3rem .3rem 1rem hsl(0, 0%, 75%);
+}
+
+.testimonial-para{
+    font-size: 1.2rem;
+    color: hsl(233, 11%, 16%);
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.avatar{
+    display: flex;
+    align-items: center;
+}
+
+.avatar-image-wrapper{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+
+.avatar-image{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.avatar .name{
+    font-size: 0.9rem;
+    margin: 0 0 .5rem 0;
+}
+
+.avatar .designation{
+    font-size: .8rem;
+    margin: 0;
+}
+
+@media (min-width: 500px){
+    .avatar-image-wrapper{
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+    .avatar .name{
+        font-size: 1.2rem;
+        margin: 0 0 .7rem 0;
+    }
+    
+    .avatar .designation{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 900px){
+    .share{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .share .illustration{
+        order: 2;
+        max-width: 35rem;
+    }
+    .share-content {
+        order: 1;
+    }
+    .share-content .heading{
+        text-align: left;
+    }
+    .fylo-link-wrapper{
+        text-align: left;
+    }
+    .fylo-link{
+        padding-left: 0;
+    }
+    .fylo-link span{
+        font-size: 1.6rem;
+        margin-right: 1rem;
+    }
+    .fylo-link img{
+        width: 2.5rem;
+    }
+    .testimonial{
+        margin: 4rem 0 0 0;
+        max-width: 35rem;
+    }
+    .testimonial-para{
+        font-size: 1.5rem;
+    }
+    
+}
+
+.access{
+    background-color: hsl(238, 22%, 44%);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.access .content{
+    margin-bottom: 2rem;   
+}
+
+.access .heading{
+    margin: 0 0 2rem 0;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.access .info{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.access .signup-text-input{
+    color: #444;
+}
+
+.access .signup-btn{
+    box-shadow: .3rem .3rem 1rem hsl(239, 27%, 29%);
+}
+
+@media (min-width: 700px){
+    .access{
+        flex-direction: row;
+    }
+    .access .content{
+        flex: 1 1 0;
+        margin-right: 2rem;
+    }
+    .access .signup-form{
+        flex: 1 1 0;
+    }
+    .access .info{
+        margin: 0;
+    }
+    .access .form-control{
+        max-width: 35rem;
+        width: 90%;
+    }
+    .access .signup-btn{
+        max-width: 20rem;
+    }
+}
+
+.footer{
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+    padding: 7rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "logo"
+        "contact"
+        "nav1"
+        "nav2"
+        "socials"
+        ;
+    row-gap: 3rem;
+}
+
+.contact-details{
+    list-style: none;
+    padding: 0;
+}
+
+.contact-item{
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
+.contact-item img{
+    margin-right: 2rem;
+    vertical-align: middleup;
+}
+
+.footer-nav-items{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav-item{
+    margin: 1rem;
+}
+
+.footer-nav-link{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: white;
+}
+
+.footer-nav-link:hover{
+    color: #f67824;
+    border-color: #f67824;
+}
+
+.social-links-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.social-link{
+    text-decoration: none;
+    color: white;
+}
+.social-link i{
+    margin: 1rem;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+.social-link i:hover{
+    color: #f67824;
+    border-color: #f67824;
+}
+
+@media (min-width: 500px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "logo logo"
+            "contact contact"
+            "nav1 nav2"
+            "social social";
+    }
+    .logo-wrapper{
+        grid-area: logo;
+    }
+    .contact-info{
+        grid-area: contact;
+    }
+    .footer-nav:nth-child(3){
+        grid-area: nav1;
+    }
+    .footer-nav:nth-child(4){
+        grid-area: nav2;
+    }
+    .social-links{
+        grid-area: social;
+    }
+}
+
+@media (min-width: 750px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "logo    logo    logo   logo"
+            "contact contact nav1   nav2"
+            "social  social  social social";
+    }
+}
+
+@media (min-width: 1000px){
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "logo    logo logo logo"
+            "contact nav1 nav2  social";
+    }
+    .footer-nav:nth-child(3){
+        justify-self: center;
+    }
+    .footer-nav:nth-child(4){
+        justify-self: center;
+    }
+}

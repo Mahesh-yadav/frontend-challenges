@@ -1,0 +1,13 @@
+{
+  "name": "grand-hotel",
+  "version": "1.0.0",
+  "description": "A hotel website created using CSS flexbox layout",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0"
+  }
+}

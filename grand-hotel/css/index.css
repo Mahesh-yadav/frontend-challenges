@@ -1,0 +1,926 @@
+html{
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar{
+    width: 6rem;
+    height: 100vh;
+    background-color: #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu-icon{
+   margin-top: 1rem;
+   cursor: pointer;
+   border: 1px solid rgb(187, 183, 183);
+   border-radius: .5rem ;
+   padding: 1rem;
+}
+
+.bar{
+    width: 2.5rem;
+    height: .2rem;
+    background-color: #222;
+    margin-bottom: .6rem;
+}
+
+.bar-1, .bar-3{
+    width: 1.8rem;
+    transition: width .3s, transform .4s;
+}
+
+.bar-3{
+    margin-bottom: 0;
+}
+
+.menu-icon:hover .bar-1, .menu-icon:hover .bar-3{
+    width: 2.5rem;
+}
+
+.checkbox:checked ~ .sidebar .menu-icon{
+    border: solid .1rem transparent;
+}
+
+.checkbox:checked ~ .sidebar .bar-1{
+    width: 2.6rem;
+    transform: translate(0, 8px) rotate(-405deg);
+    transform-origin: center;
+}
+
+.checkbox:checked ~ .sidebar .bar-2{
+    opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .bar-3{
+    width: 2.6rem;
+    transform: translate(0, -8px) rotate(405deg);
+    transform-origin: center;
+}
+
+.social-links-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25rem;
+}
+
+.social-link a{
+    font-size: 2rem;
+    color: #777;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.social-link a:hover{
+    color: #dd7022;
+}
+
+.year{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left: -19rem;
+    width: 25rem;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(34, 32, 41, 1), rgba(34, 32, 41, .8)), url(../images/nav-bg.jpeg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: left .8s cubic-bezier(1, 0, 0, 1);
+    z-index: 9;
+}
+
+.checkbox:checked ~ .navigation {
+    left: 6rem;
+}
+
+.navigation-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #dd7022;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.navigation-search{
+    position: relative;
+}
+
+.navigation-search-input{
+    width: 20rem;
+    padding: .5rem 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #dd7022;
+    border: .1rem solid #555;
+    border-radius: 10rem;
+    transition: background-color .3s, border .3s;
+}
+
+.navigation-search-input:focus{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: .1rem solid #dd7022;
+}
+
+.navigation-search-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: #dd7022;
+    position: absolute;
+    top: .7rem;
+    right: .1rem;
+    cursor: pointer;
+    transition: font-size .3s, top .3s;
+}
+
+.navigation-search-btn:hover{
+    font-size: 2rem;
+    top: .3rem
+}
+
+.navigation-search-btn:focus{
+    outline: none;
+}
+
+.navigation-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-link{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    position: relative;
+    transition: color .3s;
+    padding: 0.5rem 0;
+}
+
+.navigation-link::before{
+    content: '';
+    width: 0;
+    height: .2rem;
+    background-color: #dd7022;
+    position: absolute;
+    top: 1.4rem;
+    left: -4rem;
+    transition: width .3s;
+}
+
+.navigation-link::after{
+    content: '';
+    width: 0;
+    height: .2rem;
+    background-color: #dd7022;
+    position: absolute;
+    top: 1.4rem;
+    right: -4rem;
+    transition: width .3s;
+}
+
+.navigation-link:hover{
+    color: #dd7022;
+}
+
+.navigation-link:hover::before,
+.navigation-link:hover::after{
+    width: 3rem;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: white;
+}
+
+.header {
+    margin-left: 6rem;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../images/header-2.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img{
+    width: 6rem;
+}
+
+.brand-heading{
+    color: #dd7022;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.banner{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+    text-align: center;
+}
+
+.banner-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    animation: banner-anim 2s;
+}
+
+.banner-content{
+    font-size: 2rem;
+    font-weight: 500;
+    animation: banner-anim 1.5s 0.5s backwards;
+}
+
+.banner-btn{
+    width: 15rem;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    border: none;
+    border-radius: 10rem;
+    outline: none;
+    background: linear-gradient(to right, gold, goldenrod);
+    cursor: pointer;
+    animation: banner-anim 1s 1s backwards;
+}
+
+.banner-btn:hover{
+    background: linear-gradient(to left, gold, goldenrod);
+}
+
+.banner-btn:active{
+    transform: translateY(.2rem);
+}
+
+@keyframes banner-anim{
+    0% {
+        opacity: 0;
+    }  
+    100%{
+        opacity: 1;
+    }
+}
+
+.about-us{
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding-bottom: 12rem;
+}
+
+.about-us-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    margin-bottom: 10rem;
+}
+
+.about-us-heading{
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0 0 2rem 0;
+    color: #555;
+}
+
+.small-underline{
+    width: 9rem;
+    height: .1rem;
+    background-color: #f56c0a;
+    margin: 0 auto .5rem auto;
+}
+
+.large-underline{
+    width: 20rem;
+    height: .1rem;
+    margin: auto;
+    background-color: #f56c0a;
+}
+
+.sub-heading{
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    color: #f56c0a;
+    margin-bottom: 1rem;
+}
+
+.about-us-paragraph{
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    color: #666;
+}
+
+.about-us-btn{
+    width: 15rem;
+    padding: .5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: 1.2rem;
+    color: #f56c0a;
+    background-color: transparent;
+    border: .1rem solid #f56c0a;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-arrow{
+    margin-left: .5rem;
+    transition: margin-left .4s;
+}
+
+.about-us-btn:hover .btn-arrow{
+    margin-left: 1.5rem;
+}
+
+.about-us-images{
+    position: relative;
+}
+
+.image{
+    width: 18rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.5);
+    border-radius: .4rem;
+    border: .1rem solid #f56c0a;
+}
+
+.image-1{
+    transform: translate(-20%, -90%);
+}
+
+.image-2{
+    transform: translate(-70%, -70%);
+}
+
+.image-3{
+    transform: translate(-50%, -50%);
+}
+
+.image-4{
+    transform: translate(-30%, -30%);
+}
+
+.common-header{
+    padding: 3rem;
+    text-align: center;
+    color: #f56c0a;
+}
+
+.common-heading{
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+}
+
+.rooms{
+    margin-left: 6rem;
+}
+
+.rooms-card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.room-card{
+    width: 50rem;
+    margin: 2rem;
+    background-color: #15141b;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+.room-image{
+    width: 100%;
+}
+
+.room-card-content{
+    color: #ddd;
+    padding: 1rem;
+}
+
+.room-card-heading{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.room-card-paragraph{
+    font-size: 1.5rem;
+    color: #777;
+}
+
+.room-price{
+    text-align: right;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.room-card-btn{
+    width: 15rem;
+    padding: 1rem 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: 1.2rem;
+    color: #f56c0a;
+    background-color: transparent;
+    border: .1rem solid #f56c0a;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+
+.room-card-btn:hover .btn-arrow{
+    margin-left: 1.5rem;
+}
+
+.rooms-btn-wrapper{
+    text-align: center;
+}
+
+.rooms-btn{
+    width: 20rem;
+    padding: 1rem;
+    margin: 1rem 0 3rem 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #f56c0a;
+    border: .2rem solid #f56c0a;
+    border-radius: .5rem;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.2);
+    transition: all .2s;
+}
+
+.rooms-btn:hover{
+    color: #ddd;
+    background-color: #f56c0a;
+}
+
+.rooms-btn:active{
+    transform: translateY(.2rem);
+}
+
+.customers{
+    margin-left: 6rem;
+    padding-bottom: 5rem;
+    background-color: #15141b;
+}
+
+.customers-paragraph{
+    font-size: 1.3rem;
+    color: #ddd;
+    width: 70%;
+    margin: 2rem auto 5rem auto;
+    text-align: center;
+}
+
+.customers-card-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.customers-card{
+    background-color: #eee;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.customer-image-wrapper{
+    margin: 0 auto;
+}
+
+.customer-image{
+    width: 100%;
+}
+
+.customer-info{
+    padding: 0 2rem;
+}
+
+.customer-name{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.customer-para-1{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #f56c0a;
+}
+
+.customer-para-2{
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.footer{
+    margin-left: 6rem;
+}
+
+.footer-main-content{
+    background-color: #444;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-address, .footer-nav, .footer-contact {
+    margin-bottom: 2rem;
+}
+
+.footer-heading{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #f56c0a;
+    margin: 1rem 0 1rem 0;
+}
+
+.hotel-addr a{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ddd;
+}
+
+.footer-nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav-link{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #ddd;
+    padding: .5rem 0;
+    font-size: 1.3rem;
+}
+
+.footer-nav-link:hover{
+    color: #f56c0a;
+}
+
+.contact-form-heading{
+    color: #ddd;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 2rem 0;
+}
+
+.form-controls{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-form-input{
+    width: 20rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+    padding: .5rem;
+    color: #444;
+    border: none;
+    border-radius: .3rem;
+    outline: none;
+}
+
+.contact-form-btn{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    padding: .6rem 2rem;
+    margin-top: 2rem;
+    color: #f56c0a;
+    background-color: #2e2e2e;
+    border: .1rem solid #f56c0a;
+    border-radius: 5rem;
+    outline: none;
+}
+
+.contact-form-btn:hover{
+    background-color: #f56c0a;
+    color: #2e2e2e;
+}
+
+.footer-gallery-images{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 45rem;
+    /* justify-content: center; */
+}
+
+.footer-image-wrapper{
+    width: 10rem;
+    margin: .2rem;
+    overflow: hidden;
+}
+
+.footer-image{
+    width: 100%;
+    border-radius: .5rem;
+    transition: transform .5s;
+}
+
+.footer-image:hover{
+    transform: scale(1.2);
+}
+
+.creator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    padding: 2rem 4rem;
+    text-align: center;
+}
+
+.copyright-text{
+    font-size: 1.3rem;
+    color: #aaa;
+    margin: 0 0 2rem 0;
+}
+
+.text-right{
+    font-size: 1.4rem;
+    color: #bbb;
+    margin: 0;
+}
+
+.text-right i{
+    font-size: 2rem;
+    margin: .5rem;
+    color: tomato;
+}
+
+.text-right span{
+    color: gold;
+}
+
+@media (min-width: 600px){
+    .sidebar{
+        width: 8rem;
+    }
+    .menu-icon{
+        margin-top: 3rem;
+    }
+    .navigation{
+        left: -22rem;
+        width: 30rem;
+    }
+    .checkbox:checked ~ .navigation {
+        left: 8rem;
+    }
+    .header, .rooms, .customers, .footer{
+        margin-left: 8rem;
+    }
+    .brand{
+        justify-content: flex-start;
+    }
+    .brand-heading{
+        font-size: 3rem;
+    }
+    .banner-heading{
+        font-size: 4rem;
+    }
+    .banner-content{
+        font-size: 2.5rem;
+    }
+    .banner-btn{
+        padding: .8rem 1.2rem;
+    }
+    .about-us {
+        padding-bottom: 15rem;
+        margin-left: 8rem;
+    }
+    .about-us-heading{
+        font-size: 4rem;
+    }
+    .sub-heading{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .about-us-paragraph{
+        font-size: 1.6rem;
+        width: 80%;
+        max-width: 50rem;
+    }
+    .about-us-images{
+        margin-top: 4rem;
+    }
+    .image{
+        width: 25rem;
+    }
+    .common-heading{
+        font-size: 4rem;
+    }
+    .customers-paragraph{
+        font-size: 1.6rem;
+    }
+    .customers-card-wrapper{
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .customers-card{
+        width: 40%;
+    }
+    .footer-image-wrapper{
+        width: 12rem;
+    }
+    .footer-main-content{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer-heading{
+        font-size: 2.5rem;
+    }
+    .footer-address, .footer-nav, .footer-contact, .footer-gallery {
+        margin: 1rem 2rem;
+    }
+}
+
+@media (min-width: 900px){
+    .banner{
+        height: 80vh;
+    }
+    .banner-heading{
+        font-size: 5rem;
+    }
+    .banner-content{
+        font-size: 3.5rem;
+    }
+    .footer-main-content{
+        padding: 3rem;
+    }
+    .footer-heading{
+        font-size: 3rem;
+        margin: 1rem 0 3rem 0;
+    }
+    .hotel-addr a{
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+    .footer-nav-link{
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+    .contact-form-heading{
+        font-size: 2rem;
+    }
+    .footer-gallery-images{
+        width: 45rem;
+    }
+    .creator{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+    }
+    .copyright-text{
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1000px){
+    .common-header{
+        padding: 4rem;
+    }
+    .common-heading{
+        font-size: 5rem;
+    }
+    .room-card{
+        width: 40%;
+        max-width: 50rem;
+    }
+}
+
+@media (min-width: 1100px){
+    .about-us{
+        flex-direction: row;
+        padding-bottom: 1rem;
+    }
+    .about-us-content{
+        flex: 1 1 0;
+        padding: 5rem 3rem;
+        margin-bottom: 0;
+    }
+    .about-us-heading{
+        font-size: 4rem;
+    }
+    .sub-heading{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .about-us-paragraph{
+        font-size: 1.6rem;
+    }
+    .about-us-images{
+        position: relative;
+        flex: 1 1 6rem;
+    }
+    .customers-paragraph{
+        font-size: 1.6rem;
+    }
+    .customers-card{ 
+        flex-direction: row;
+    }
+    .customer-image-wrapper{
+        margin: auto 0;
+        padding: 1rem 0;
+    }
+    .customer-image{
+        margin-left: -1rem;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,447 @@
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.header{
+    padding: 1rem;
+    background: url(./images/bg-hero-mobile.svg), linear-gradient(to bottom, hsl(193, 100%, 96%), hsl(193, 100%, 96%));
+    background-position: top left, top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .brand{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+}
+
+.header .logo-wrapper{
+    width: 10rem;
+}
+
+.header .logo-wrapper img{
+    width: 100%;
+}
+
+.header .try-btn{
+    color: hsl(192, 100%, 9%);
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: .5rem 2rem;
+    border-radius: 5rem;
+    box-shadow: .2rem .2rem .5rem #aaa;
+}
+
+.header .try-btn:hover{
+    color: hsl(322, 100%, 66%);
+}
+
+.header-content{
+    padding: 2rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content .text{
+    text-align: center;
+    color: hsl(192, 100%, 9%);
+    margin-bottom: 5rem;
+    max-width: 40rem;
+}
+
+.header-content .heading{
+    font-family: "Poppins",sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.header-content .paragraph{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.header-content .start-btn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: hsl(322, 100%, 66%);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 22rem;
+    padding: 1rem 0;
+    border-radius: 10rem;
+}
+
+.header-content .start-btn:hover{
+    color: hsl(192, 100%, 9%);
+}
+
+.header-illustration{
+    width: 100%;
+    max-width: 40rem;
+    margin: 0;
+}
+
+.header-illustration img{
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content{
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem .5rem hsl(208, 11%, 55%);
+    margin: 1rem 3rem 0 3rem;
+    max-width: 35rem;
+}
+
+.card-illustration{
+    width: 80%;
+    margin: 1rem 0 2rem 0;
+}
+
+.card-illustration img{
+    width: 100%;
+}
+
+.card-content{
+    padding: 1rem 3rem;
+    text-align: center;
+}
+
+.card-heading{
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: hsl(192, 100%, 9%);
+}
+
+.card-paragraph{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: hsl(208, 11%, 55%)
+}
+
+.get-started-card{
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem .5rem hsl(208, 11%, 55%);
+    margin: 0 3rem 3rem 3rem;
+    max-width: 35rem;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    top: 10rem;
+    z-index: 10;
+    background-color: white;
+}
+
+.get-started-card .heading{
+    color: hsl(192, 100%, 9%);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+}
+
+.get-started-card .start-btn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: hsl(322, 100%, 66%);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 22rem;
+    padding: 1rem 0;
+    border-radius: 10rem;
+}
+
+.get-started-card .start-btn:hover{
+    color: hsl(192, 100%, 9%);
+}
+
+.footer{
+    padding: 15rem 2rem 5rem 2rem;
+    color: hsl(193, 100%, 96%);
+    background-color: hsl(192, 100%, 9%);
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+
+.footer .logo-wrapper{
+    width: 15rem;
+    margin: 0;
+}
+
+.footer .logo-wrapper img{
+    width: 100%;
+}
+
+.address-item{
+    display: flex;
+    align-items: flex-start;
+    margin: 3rem 0;
+}
+
+.address-item img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 2rem;
+}
+.address-item:nth-child(1) img{
+    margin-right: 3.3rem;
+}
+
+.address-item p{
+    margin: 0;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    max-width: 30rem;
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer-nav-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-links li{
+    margin: 1rem 0;
+}
+
+.footer-nav-links li:nth-child(1){
+    margin-top: 0;
+}
+
+.footer-nav-link{
+    text-decoration: none;
+    color: hsl(193, 100%, 96%);
+    font-size: 1.5rem;
+}
+
+.footer-nav-link:hover{
+    color: hsl(322, 100%, 66%);
+}
+
+.social-links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-link{
+    text-decoration: none;
+    color: hsl(193, 100%, 96%);
+    border: .1rem solid hsl(193, 100%, 96%);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
+}
+
+.social-link:hover{
+    border: .1rem solid hsl(322, 100%, 66%);
+    color: hsl(322, 100%, 66%);
+}
+
+.copyright{
+    text-align: center;
+    font-size: 1rem;
+}
+
+@media (min-width: 500px){
+    .footer-nav{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-nav-links{
+        flex: 1 1 0;
+    }
+}
+
+@media (min-width: 600px){
+    .header .brand{
+        padding: 1rem 3rem;
+    }
+}
+
+@media (min-width: 800px){
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "logo    logo"
+            "address nav"
+            "social  social"
+            "copy    copy";
+    }
+    .footer .logo-wrapper{
+        grid-area: logo;
+        padding-bottom: 2rem;
+    }
+    .footer address{
+        grid-area: address;
+    }
+    .footer .address-item:nth-child(1){
+        margin-top: 0;
+    }
+    .footer-nav{
+        grid-area: nav;
+        flex-direction: column;
+        justify-self: center;
+    }
+    .footer .social-links{
+        grid-area: social;
+    }
+    .footer .copyright{
+        grid-area: copy;
+    }
+}
+
+@media (min-width: 900px){
+    .header{
+        background: url(./images/bg-hero-desktop.svg), linear-gradient(to bottom, hsl(193, 100%, 96%), hsl(193, 100%, 96%));
+    }
+    
+    .header .brand{
+        padding: 2rem 5rem;
+    }
+    
+    .header-content{
+        margin-top: 1rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .header-content .text{
+        text-align: left;
+    }
+    .main-content{
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-content .card{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 1rem 3rem;
+        width: 80%;
+        max-width: 100rem;
+    }
+
+    .grow-together .card-illustration,
+    .your-users .card-illustration{
+        order: 1;
+    }
+
+    .grow-together .card-content,
+    .your-users .card-content,
+    .flowing-conversation .card-illustration{
+        margin-left: 5rem;
+    }
+    
+    .card-illustration{
+        flex: 4 1 0;
+        margin: 0 2rem;
+        width: 0;
+        padding: 3rem;
+    }
+    .card-content{
+        flex: 6 1 0;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1100px){
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "logo    logo logo"
+            "address nav  social"
+            "copy    copy copy";
+        column-gap: 3rem; 
+    }
+    .footer .logo-wrapper{
+        grid-area: logo;
+        padding-bottom: 2rem;
+    }
+    .footer address{
+        grid-area: address;
+    }
+    .footer .address-item:nth-child(1){
+        margin-top: 0;
+    }
+    .footer-nav{
+        grid-area: nav;
+        flex-direction: row;
+        justify-self: stretch;
+        padding-left: 5rem;
+    }
+    .footer .social-links{
+        grid-area: social;
+        margin: 0;
+    }
+    .footer .social-link{
+        margin-top: 0;
+    }
+    .footer .copyright{
+        grid-area: copy;
+    }
+    .copyright{
+        text-align: right;
+        font-size: 1.4rem;
+    }
+}
+
+
+
+

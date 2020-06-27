@@ -1,0 +1,158 @@
+html{
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-image: url(./images//bg-mobile.svg), linear-gradient(to bottom, hsl(257, 40%, 49%), #674bafe6);
+    background-position: top left, top left;
+    background-repeat: no-repeat;
+}
+
+.logo-wrapper{
+    width: 12rem;
+    margin-bottom: 5rem;
+}
+
+.logo-wrapper img{
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.illustration .wrapper{
+    width: 100%;
+    max-width: 38rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.illustration .image{
+    width: 100%;
+}
+
+.content{
+    color: white;
+    text-align: center;
+    max-width: 38rem;
+}
+
+.content .heading{
+    font-family: "Poppins", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.content .paragraph{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.content .btn{
+    font-family: "Open Sans" ,sans-serif;
+    font-size: 1.2rem;
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    outline: none;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    width: 20rem;
+    padding: 1rem 0;
+    box-shadow: .3rem .3rem 1rem #666;
+}
+
+.content .btn:hover{
+    color: darkblue;;
+}
+
+.social-links-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 1rem 0;
+}   
+
+.social-link{
+    text-decoration: none;
+    color: white;
+    border: .1rem solid white;
+    border-radius: 100%;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link:hover{
+    color: darkblue;
+    border: .1rem solid #00008b;
+}
+
+.social-link i {
+   font-size: 1.5rem;
+}
+
+@media (min-width: 700px){
+    body{
+        background-image: url(./images/bg-desktop.svg), linear-gradient(to bottom, hsl(257, 40%, 49%), hsla(257, 40%, 49%, 0.902));
+        background-size: contain;
+    }
+    
+}
+
+@media (min-width: 900px){
+    main{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .illustration .wrapper{
+        flex: 4 1 0;
+        margin-bottom: 0;
+    }
+    .content{
+        flex: 3 1 0;
+        text-align: left;
+    }
+    .content .paragraph{
+        font-size: 1.4rem;
+    }
+    .content .btn{
+        width: 15rem;
+    }
+    .social-links-list{
+        justify-content: flex-end;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+{
+  "name": "furniture-store",
+  "version": "1.0.0",
+  "description": "A demo furniture store website using css grid layout",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1"
+  }
+}
