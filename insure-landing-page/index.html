@@ -12,10 +12,17 @@
 </head>
 <body>
   <div class="container">
+    <input type="checkbox" id="menu-toggle" hidden>
     <header class="nav-bar">
       <div class="logo-wrapper">
         <img src="./images/logo.svg" alt="Insure Logo">
       </div>
+      <label for="menu-toggle" id="toggle-menu-icon-label">
+        <img src="./images/icon-hamburger.svg" alt="Menu Icon">
+      </label>
+      <label for="menu-toggle" id="toggle-close-icon-label">
+        <img src="./images/icon-close.svg" alt="Close Icon">
+      </label>
       <nav class="main-nav">
         <ul class="main-nav-items">
           <li class="main-nav-item">
@@ -37,7 +44,7 @@
       <div class="banner-image">
         <img src="./images/image-intro-desktop.jpg" alt="A family image" srcset="./images/image-intro-mobile.jpg 375w,
                 ./images/image-intro-desktop.jpg 540w"
-        sizes="(max-width: 800px) 375px,
+        sizes="(max-width: 600px) 375px,
                 540px" 
         >
       </div>
