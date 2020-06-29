@@ -7,6 +7,7 @@ Website pages built with vanilla HTML, CSS, JavaScript
 | Challenges                                    | Links                                                                                                                         |
 | -----------------------------------           | ----------------------------------------------------------------------------------------------------------------              |
 | Clipboard Landing Page                        | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/clipboard-landing-page/index.html)                                 |
+| Pricing Component With Toggle                 | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/pricing-component-with-toggle/index.html)                          |
 | Furniture Store                               | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/furniture-store/index.html)                                        |
 | Fylo Two Column Layout                        | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/fylo-two-column-layout/index.html)                                 |
 | Grand Hotel                                   | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/grand-hotel/index.html)                                            |
