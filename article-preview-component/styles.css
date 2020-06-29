@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+
+    --very-dark-grayish-glue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+.container{
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 2rem;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    max-width: 35rem;
+    box-shadow: .2rem .2rem .5rem .1rem var(--grayish-blue);
+}
+
+.article-image{
+    border-radius: 1rem 1rem 0 0;
+    height: 23rem;
+}
+
+.article-image img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.article-text{
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.article-text > h1{
+    font-size: 1.9rem;
+    color: var(--very-dark-grayish-glue);
+    font-weight: 700;
+    margin: 4rem 3rem 2rem 3rem;
+}
+
+.article-text > p{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: var(--grayish-blue);
+    font-weight: 500;
+    margin: 0 3rem 2rem;
+}
+
+.article-author{
+    display: flex;    
+    align-items: center;
+    height: 7rem;
+    padding: 2rem 3rem;
+    border-radius: 0 0 1rem 1rem;
+    background-color: transparent;
+    transition: background-color .5s ease-out;
+}
+
+.show-share-links{
+    background-color: var(--very-dark-grayish-glue);
+}
+
+.avatar{
+    display: flex;
+    align-items: center;
+}
+
+.author-image{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+
+.author-image img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.author-name{
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--very-dark-grayish-glue);
+}
+
+.publish-date{
+    margin: 0;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    color: var(--desaturated-dark-blue);
+}
+
+.share-overlay{
+    display: flex;
+    align-items: center;
+}
+
+.share-overlay span{
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: 1.4rem;
+    color: var(--grayish-blue);
+}
+
+.social-icons{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 2rem;
+    display: flex;
+}
+
+.social-icon-item{
+    margin-right: 2rem;
+}
+
+.social-icon-link:hover path{
+    fill: var(--grayish-blue);
+}
+
+.share-btn{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: auto;
+    margin-right: .5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.share-btn:hover path{
+    fill: var(--grayish-blue);
+}
+
+.show-share{
+    background-color: var(--desaturated-dark-blue);
+}
+
+.show-share path{
+    fill: var(--light-grayish-blue);
+}
+
+.hidden{
+    display: none !important;
+}
+
+.attribution{
+    padding: 5rem 3rem;
+    background-color: var(--light-grayish-blue);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.attribution a:hover{
+    color: var(--very-dark-grayish-glue);
+}
+
+.attribution span{
+    font-weight: bold;
+}
+
+@media(min-width: 900px){
+    .article{
+        max-width: 80rem;
+        flex-direction: row;
+        height: 30rem;
+    }
+    
+    .article-image{
+        border-radius: 1rem 0 0 1rem;
+        height: 100%;
+        width: 30rem;
+    }
+    
+    .article-image img{
+        width: auto;
+        border-radius: 1rem 0 0 1rem;
+        height: 100%;
+    }
+    
+    .article-text{
+        border-radius: 0 1rem 1rem 0;
+    }
+    
+    .article-author{
+        position: relative;
+        padding-bottom: 4rem;
+        transition: none;
+    }
+    
+    .share-overlay{
+        position: absolute;
+        top: -110%;
+        right: -8%;
+        z-index: 10;
+        background-color: var(--very-dark-grayish-glue);
+        box-shadow: .1rem .5rem 1rem 0 var(--grayish-blue);
+        padding: 1.6rem 3.2rem;
+        border-radius: 1rem;
+        animation: share .5s;
+    }
+
+    .share-overlay::after{
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 1rem solid var(--very-dark-grayish-glue);
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        position: absolute;
+        left: 60%;
+        top: 100%;
+    }
+}
+
+@keyframes share{
+    0%{
+        opacity: 0;
+        top: -50%;
+    }    
+    100%{
+        top: -110%;
+        opacity: 1;
+    }   
+}
+
+
+
+
+
+
