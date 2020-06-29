@@ -13,6 +13,7 @@ Website pages built with vanilla HTML, CSS, JavaScript
 | Huddle Page Alternating Features              | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/huddle-landing-page-with-alternating-feature-blocks/index.html)    |
 | Social Media Dashboard with theme switcher    | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/social-media-dashboard-with-theme-switcher/index.html)             |
 | Insure Landing Page                           | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/insure-landing-page/index.html)                                    |
+| Article Preview Component                     | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/article-preview-component/index.html)                              |
 | Base Apparel Coming Soon                      | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/base-apparel-coming-soon/index.html)                               |
 | Bootcamp Testimonials Slider                  | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/coding-bootcamp-testimonials-slider/index.html)                    |
 | Four Card Feature Section                     | [Demo](https://frontend-challenges.mahesh-yadav.vercel.app/four-card-feature-section/index.html)                              |
