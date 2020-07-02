@@ -12,19 +12,45 @@
 
 </head>
 <body>
-  Product
-  Features
-  Pricing
-  Login
-
-  New
-  Monograph Dashboard
-
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
-
+  <div class="container">
+    <input type="checkbox" id="menu-toggle" hidden>
+    <header class="header">
+      <img src="./images/logo.svg" alt="Logo" class="header-logo">
+      <label for="menu-toggle" class="menu-toggle-label">
+        <img src="./images/icon-hamburger.svg" alt="Menu Icon" class="menu-icon">
+        <img src="./images/icon-close.svg" alt="Close Icon" class="close-icon">
+      </label>
+      <nav class="navigation">
+        <ul class="navigation-items">
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Product</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Features</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Pricing</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link login-link">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="content-illustration">
+      <img src="./images/illustration-devices.svg" alt="Devices Illustration">
+    </section>
+    <section class="content-text">
+      <p class="content-title">
+        <span class="new-text">New</span> Monograph Dashboard
+      </p>
+      <h1 class="content-heading">Powerful insights into your team</h1>
+      <p class="content-desc">Project planning and time tracking for agile teams</p>
+      <div class="content-btn-wrapper">
+        <button class="content-btn">Schedule a demo</button>
+        <span>to see a live preview</span>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
