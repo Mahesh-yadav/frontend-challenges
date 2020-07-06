@@ -1,40 +1,123 @@
-html{
-    box-sizing: border-box;
-    font-size: 10px;
+.banner-row{
+  height: 50vh;
 }
 
-* {
-  box-sizing: inherit;
+.banner-heading{
+  font-size: 3rem;
 }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.heading{
-    text-align: center;
-    font-size: 4.8rem;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  width: 50rem;
-}
-
-table,
-th,
-td {
-  border: 1px solid black;
-}
-
-th,
-td {
-  padding: 1rem;
+.banner-subheading{
   font-size: 1.6rem;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-.text-center {
-  text-align: center;
+.project-card{
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: -2px 7px 40px 2px rgba(0, 0, 0, .5);
+  transition: all ease-in-out .3s;
+  position: relative;
+  overflow: hidden;
 }
+
+.project-card:hover{
+  box-shadow: -2px 19px 24px 0 rgba(0, 0, 0, .3);
+  transform: translate(0, -8px);
+}
+
+.project-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.project-text{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 5px;
+  transition: background-color ease-in-out .5s;
+}
+
+.project-card:hover .project-text{
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(41, 95, 92, .7);
+}
+
+.project-title{
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.project-tech{
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+@media(min-width: 576px){
+  .banner-subheading{
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .card-column:nth-child(4n+1){
+    margin-right: auto;
+  }
+  .card-column:nth-child(4n+3){
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px){
+  .banner-heading{
+    font-size: 4rem;
+  }
+  .banner-subheading{
+    font-size: 2rem;
+  }
+  .card-column:nth-child(n){
+    margin: 0;
+  }
+}
+
+@media (min-width: 992px){
+  .banner-heading{
+    font-size: 5rem;
+  }
+  .banner-subheading{
+    font-size: 2.4rem;
+  }
+  .project-title{
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .project-tech{
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1200px){
+  .project-title{
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .project-tech{
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
+
